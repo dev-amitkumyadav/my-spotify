@@ -1,54 +1,29 @@
 "use client";
-import { useState } from "react";
 
 export default function Admin() {
   return (
-    <div style={{ background: "white", minHeight: "100vh", fontFamily: "sans-serif", color: "#111" }}>
-      <div style={{ maxWidth: "1150px", margin: "0 auto", padding: "70px 20px" }}>
-        
-        <h1 style={{ textAlign: "center", fontSize: "72px", fontWeight: "900", margin: 0, letterSpacing: "-3px" }}>Hello!</h1>
-        <p style={{ textAlign: "center", fontSize: "18px", color: "#555", marginTop: "8px" }}>I'm a creative Full-Stack webdeveloper</p>
+    <div style={{ background: "white", minHeight: "100vh", color: "#111", fontFamily: "sans-serif" }}>
+      <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "60px 20px" }}>
+        <h1 style={{ textAlign: "center", fontSize: "70px", fontWeight: "900", margin: 0 }}>Hello!</h1>
+        <p style={{ textAlign: "center", fontSize: "18px", color: "#555" }}>I'm a creative Full-Stack webdeveloper</p>
 
-        <div style={{ display: "grid", gridTemplateColumns: "340px 1fr 280px", gap: "60px", marginTop: "70px", alignItems: "start" }}>
-          
-          {/* LEFT - AAPKI PHOTO */}
-          <div style={{ background: "#E8DCC6", borderRadius: "24px", overflow: "hidden", height: "420px" }}>
-            <img src="/amit.jpg" alt="Amit" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top" }} />
+        <div style={{ display: "grid", gridTemplateColumns: "320px 1fr 260px", gap: "50px", marginTop: "60px" }}>
+          <div style={{ background: "#E8DCC6", borderRadius: "20px", overflow: "hidden", height: "400px" }}>
+            <img src="/amit.jpg" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top" }} />
           </div>
 
-          {/* MIDDLE */}
           <div>
-            <h3 style={{ fontSize: "23px", fontWeight: "400", margin: 0 }}>About me</h3>
-            <p style={{ lineHeight: "1.9", color: "#444", fontSize: "15.5px", marginTop: "18px" }}>
-              I am an allround web developer from Ballia. I am a senior programmer with good knowledge of front-end and back-end. 
-              I am building <b>My Spotify Clone</b> with Next.js, Tailwind and Vercel. I love clean UI, music apps and real-world projects.
-              My dream is to become a top developer from Uttar Pradesh and launch my own startup.
+            <h3>About me</h3>
+            <p style={{ lineHeight: "1.8", color: "#444", fontSize: "15px" }}>
+              I'm an all-round web developer based in Ballia, passionate about building responsive, user-friendly web applications. With experience in both frontend and backend, I enjoy turning ideas into clean, functional, and scalable solutions. I work with JavaScript, React, Node.js, and modern frameworks.
             </p>
-            <p style={{ marginTop: "25px", fontSize: "14px", color: "#999" }}>Image by Amit Kumar Yadav</p>
           </div>
 
-          {/* RIGHT - DETAILS UPDATED */}
           <div>
-            <h3 style={{ fontSize: "23px", fontWeight: "400", margin: 0 }}>Details</h3>
-            <div style={{ marginTop: "18px" }}>
-              <p style={{ fontWeight: "700", margin: "0 0 4px 0", fontSize: "14px" }}>Name:</p>
-              <p style={{ margin: "0 0 18px 0", color: "#444" }}>Amit Kumar Yadav</p>
-
-              <p style={{ fontWeight: "700", margin: "0 0 4px 0", fontSize: "14px" }}>Age:</p>
-              <p style={{ margin: "0 0 18px 0", color: "#444" }}>23 years</p>
-
-              <p style={{ fontWeight: "700", margin: "0 0 4px 0", fontSize: "14px" }}>Location:</p>
-              <p style={{ margin: "0 0 18px 0", color: "#444" }}>Ballia, Uttar Pradesh, India</p>
-              
-              <p style={{ fontWeight: "700", margin: "0 0 4px 0", fontSize: "14px" }}>Project:</p>
-              <p style={{ margin: "0 0 22px 0", color: "#444" }}>my-spotify-mu-six.vercel.app</p>
-
-              <div style={{ display: "flex", gap: "18px", fontSize: "18px", fontWeight: "bold" }}>
-                <a href="https://github.com/dev-amitkumyadav" style={{textDecoration:"none", color:"black"}}>f</a>
-                <span>𝕏</span>
-                <span>◎</span>
-              </div>
-            </div>
+            <h3>Details</h3>
+            <p><b>Name:</b> Amit Kumar Yadav</p>
+            <p><b>Age:</b> 23 years</p>
+            <p><b>Location:</b><br/>Ballia, Uttar Pradesh, India</p>
           </div>
         </div>
       </div>
