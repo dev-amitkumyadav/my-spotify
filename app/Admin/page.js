@@ -21,9 +21,10 @@ export default function Admin() {
 
   return (
     <div style={{ background: "#f5f5f7", minHeight: "100vh", padding: "20px", fontFamily: "sans-serif", color: "#111" }}>
-      {/* Profile Header */}
+      
+      {/* Profile Header with PIC */}
       <div style={{ maxWidth: "900px", margin: "0 auto", background: "white", borderRadius: "20px", padding: "25px", display: "flex", gap: "20px", alignItems: "center", boxShadow: "0 4px 20px rgba(0,0,0,0.05)" }}>
-        <div style={{ width: "80px", height: "80px", borderRadius: "50%", background: "linear-gradient(135deg, #1DB954, #191414)", display: "flex", alignItems: "center", justifyContent: "center", color: "white", fontSize: "30px", fontWeight: "bold" }}>A</div>
+        <img src="/amit.jpg" alt="Amit" style={{ width: "80px", height: "80px", borderRadius: "50%", objectFit: "cover", border: "3px solid #1DB954" }} />
         <div style={{ flex: 1 }}>
           <h1 style={{ margin: 0, fontSize: "22px" }}>Amit Kumar Yadav - 23 Years</h1>
           <p style={{ margin: "4px 0", color: "#666" }}>Founder - My Spotify | Ballia, UP 📍</p>
@@ -54,7 +55,6 @@ export default function Admin() {
           <input placeholder="MP3 ka link ya /Songs/xyz.mp3" value={song.src} onChange={e=>setSong({...song, src: e.target.value})} style={{ padding: "14px", borderRadius: "10px", border: "1px solid #ddd", background: "white", color: "black" }} />
           <button onClick={()=>{ console.log(song); alert("Gana copy ho gaya! Ab data.js me paste karo:\n\n" + JSON.stringify(song, null, 2)); }} style={{ padding: "14px", background: "#1DB954", color: "white", border: "none", borderRadius: "10px", fontWeight: "bold", fontSize: "16px", cursor: "pointer" }}>+ Add Song & Generate Code</button>
         </div>
-        <p style={{ fontSize: "12px", color: "#999", marginTop: "15px" }}>Note: Abhi ye local copy banayega. Baad me isko database se connect kar denge.</p>
       </div>
     </div>
   );
