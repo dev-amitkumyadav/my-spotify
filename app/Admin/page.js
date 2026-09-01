@@ -21,39 +21,35 @@ export default function Admin() {
 
   return (
     <div style={{ background: "#f5f5f7", minHeight: "100vh", padding: "20px", fontFamily: "sans-serif", color: "#111" }}>
-      
-      {/* Profile Header with PIC */}
-      <div style={{ maxWidth: "900px", margin: "0 auto", background: "white", borderRadius: "20px", padding: "25px", display: "flex", gap: "20px", alignItems: "center", boxShadow: "0 4px 20px rgba(0,0,0,0.05)" }}>
-        <img src="/amit.jpg" alt="Amit" style={{ width: "80px", height: "80px", borderRadius: "50%", objectFit: "cover", border: "3px solid #1DB954" }} />
+      <div style={{ maxWidth: "900px", margin: "0 auto", background: "white", borderRadius: "20px", padding: "25px", display: "flex", gap: "20px", alignItems: "center" }}>
+        <div style={{ width: "80px", height: "80px", borderRadius: "50%", background: "linear-gradient(135deg, #1DB954, #191414)", display: "flex", alignItems: "center", justifyContent: "center", color: "white", fontSize: "30px", fontWeight: "bold" }}>A</div>
         <div style={{ flex: 1 }}>
           <h1 style={{ margin: 0, fontSize: "22px" }}>Amit Kumar Yadav - 23 Years</h1>
           <p style={{ margin: "4px 0", color: "#666" }}>Founder - My Spotify | Ballia, UP 📍</p>
-          <div style={{ display: "flex", gap: "15px", marginTop: "10px", fontSize: "13px", flexWrap: "wrap" }}>
+          <div style={{ display: "flex", gap: "10px", marginTop: "10px", fontSize: "13px", flexWrap: "wrap" }}>
             <span style={{ background: "#e8f5e9", padding: "4px 10px", borderRadius: "20px" }}>🟢 Live: my-spotify-mu-six.vercel.app</span>
             <span style={{ background: "#f3e5f5", padding: "4px 10px", borderRadius: "20px" }}>GitHub: dev-amitkumyadav</span>
           </div>
         </div>
-        <button onClick={()=>setIsLogin(false)} style={{ padding: "8px 14px", borderRadius: "8px", border: "1px solid #ddd", background: "white", cursor: "pointer" }}>Logout</button>
+        <button onClick={()=>setIsLogin(false)} style={{ padding: "8px 14px", borderRadius: "8px", border: "1px solid #ddd", background: "white" }}>Logout</button>
       </div>
 
-      {/* Stats */}
       <div style={{ maxWidth: "900px", margin: "20px auto", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "15px" }}>
         <div style={{ background: "white", padding: "18px", borderRadius: "14px" }}><h3 style={{margin:0}}>6</h3><p style={{margin:0,color:"#666",fontSize:"13px"}}>Total Categories</p></div>
         <div style={{ background: "white", padding: "18px", borderRadius: "14px" }}><h3 style={{margin:0}}>∞</h3><p style={{margin:0,color:"#666",fontSize:"13px"}}>Songs Storage</p></div>
         <div style={{ background: "black", color:"white", padding: "18px", borderRadius: "14px" }}><h3 style={{margin:0}}>Ballia</h3><p style={{margin:0,color:"#aaa",fontSize:"13px"}}>UP - Full Access</p></div>
       </div>
 
-      {/* Add Song Form */}
       <div style={{ maxWidth: "900px", margin: "0 auto", background: "white", borderRadius: "20px", padding: "25px" }}>
         <h2 style={{ margin: "0 0 20px 0" }}>Naya Gana Add Karo 🎵</h2>
         <div style={{ display: "grid", gap: "15px", maxWidth: "500px" }}>
-          <input placeholder="Gane ka naam" value={song.title} onChange={e=>setSong({...song, title: e.target.value})} style={{ padding: "14px", borderRadius: "10px", border: "1px solid #ddd", background: "white", color: "black" }} />
-          <input placeholder="Artist ka naam" value={song.artist} onChange={e=>setSong({...song, artist: e.target.value})} style={{ padding: "14px", borderRadius: "10px", border: "1px solid #ddd", background: "white", color: "black" }} />
-          <select value={song.category} onChange={e=>setSong({...song, category: e.target.value})} style={{ padding: "14px", borderRadius: "10px", border: "1px solid #ddd", background: "white", color: "black" }}>
+          <input placeholder="Gane ka naam" value={song.title} onChange={e=>setSong({...song, title: e.target.value})} style={{ padding: "14px", borderRadius: "10px", border: "1px solid #ddd" }} />
+          <input placeholder="Artist ka naam" value={song.artist} onChange={e=>setSong({...song, artist: e.target.value})} style={{ padding: "14px", borderRadius: "10px", border: "1px solid #ddd" }} />
+          <select value={song.category} onChange={e=>setSong({...song, category: e.target.value})} style={{ padding: "14px", borderRadius: "10px", border: "1px solid #ddd" }}>
             <option>Ghazipur Vibes</option><option>Lucknow Dreams</option><option>Coding Nights</option><option>Bhojpuri Beats</option><option>Delhi Party</option><option>Home</option>
           </select>
-          <input placeholder="MP3 ka link ya /Songs/xyz.mp3" value={song.src} onChange={e=>setSong({...song, src: e.target.value})} style={{ padding: "14px", borderRadius: "10px", border: "1px solid #ddd", background: "white", color: "black" }} />
-          <button onClick={()=>{ console.log(song); alert("Gana copy ho gaya! Ab data.js me paste karo:\n\n" + JSON.stringify(song, null, 2)); }} style={{ padding: "14px", background: "#1DB954", color: "white", border: "none", borderRadius: "10px", fontWeight: "bold", fontSize: "16px", cursor: "pointer" }}>+ Add Song & Generate Code</button>
+          <input placeholder="MP3 ka link ya /Songs/xyz.mp3" value={song.src} onChange={e=>setSong({...song, src: e.target.value})} style={{ padding: "14px", borderRadius: "10px", border: "1px solid #ddd" }} />
+          <button onClick={()=>{ alert("Code: " + JSON.stringify(song, null, 2)) }} style={{ padding: "14px", background: "#1DB954", color: "white", border: "none", borderRadius: "10px", fontWeight: "bold", cursor: "pointer" }}>+ Add Song & Generate Code</button>
         </div>
       </div>
     </div>
