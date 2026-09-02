@@ -231,7 +231,6 @@ export default function Home() {
           <audio 
             key={current}
             controls
-            autoPlay 
             className="w-full h-10 filter invert grayscale opacity-80 contrast-200" 
             src={songs[current].url}
           ></audio>
